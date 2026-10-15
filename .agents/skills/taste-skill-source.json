@@ -1,0 +1,78 @@
+{
+  "repository": "https://github.com/Leonxlnx/taste-skill",
+  "commit": "f624f37a8c650b9cc550253104925efe4c8de246",
+  "plugin_version": "2.0.0",
+  "installation": "Project-local copies, no global plugin registration",
+  "skills": [
+    {
+      "name": "brandkit",
+      "source_directory": "skills/brandkit",
+      "installed_directory": ".agents/skills/brandkit"
+    },
+    {
+      "name": "industrial-brutalist-ui",
+      "source_directory": "skills/brutalist-skill",
+      "installed_directory": ".agents/skills/industrial-brutalist-ui"
+    },
+    {
+      "name": "gpt-taste",
+      "source_directory": "skills/gpt-tasteskill",
+      "installed_directory": ".agents/skills/gpt-taste"
+    },
+    {
+      "name": "image-to-code",
+      "source_directory": "skills/image-to-code-skill",
+      "installed_directory": ".agents/skills/image-to-code"
+    },
+    {
+      "name": "imagegen-frontend-mobile",
+      "source_directory": "skills/imagegen-frontend-mobile",
+      "installed_directory": ".agents/skills/imagegen-frontend-mobile"
+    },
+    {
+      "name": "imagegen-frontend-web",
+      "source_directory": "skills/imagegen-frontend-web",
+      "installed_directory": ".agents/skills/imagegen-frontend-web"
+    },
+    {
+      "name": "minimalist-ui",
+      "source_directory": "skills/minimalist-skill",
+      "installed_directory": ".agents/skills/minimalist-ui"
+    },
+    {
+      "name": "full-output-enforcement",
+      "source_directory": "skills/output-skill",
+      "installed_directory": ".agents/skills/full-output-enforcement"
+    },
+    {
+      "name": "redesign-existing-projects",
+      "source_directory": "skills/redesign-skill",
+      "installed_directory": ".agents/skills/redesign-existing-projects"
+    },
+    {
+      "name": "high-end-visual-design",
+      "source_directory": "skills/soft-skill",
+      "installed_directory": ".agents/skills/high-end-visual-design"
+    },
+    {
+      "name": "stitch-design-taste",
+      "source_directory": "skills/stitch-skill",
+      "installed_directory": ".agents/skills/stitch-design-taste"
+    },
+    {
+      "name": "design-taste-frontend",
+      "source_directory": "skills/taste-skill",
+      "installed_directory": ".agents/skills/design-taste-frontend"
+    },
+    {
+      "name": "design-taste-frontend-v1",
+      "source_directory": "skills/taste-skill-v1",
+      "installed_directory": ".agents/skills/design-taste-frontend-v1"
+    },
+    {
+      "name": "design-taste-frontend-v2-experimental",
+      "source_directory": "skills/taste-skill-v2-experimental",
+      "installed_directory": ".agents/skills/design-taste-frontend-v2-experimental"
+    }
+  ]
+}
