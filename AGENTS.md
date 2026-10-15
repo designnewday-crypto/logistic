@@ -26,8 +26,11 @@ Preserve the upstream files when making website changes.
   its visual style, unless the user explicitly changes the scope.
 - The user wants less visual similarity to Cargov while preserving the originally
   selected style from `design/prototype-3.jpg`. They rejected radical style changes.
-  The latest three close hero variants are in `design/original-style-variants/`;
-  a selection is pending. The older `design/redesign-directions/` set is superseded.
+  The close hero references are in `design/original-style-variants/`.
+  The user then requested a comparison beyond the hero: three full-page candidates
+  are now in `design/full-page-variants/`, with a downloadable comparison archive
+  at `preview/design-comparison.zip`. A selection is pending. The older
+  `design/redesign-directions/` set is superseded.
 - Fictional figures, routes, partners and testimonials are authorized for this
   prototype and must remain clearly labelled as illustrative.
 - Preserve working interactions. Enquiry forms currently review and download data

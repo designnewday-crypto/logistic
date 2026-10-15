@@ -12,6 +12,8 @@ HTML включает изображения, шрифт, стили и JavaScri
 
 [Скриншот компьютера](design/implementation-desktop.jpg) · [Скриншот телефона](design/implementation-mobile.jpg)
 
+[Сравнить три полные версии оформления](design/full-page-variants/README.md) · [Скачать все три версии](preview/design-comparison.zip)
+
 ![Реализованный сайт](design/implementation-desktop.jpg)
 
 ## Что работает

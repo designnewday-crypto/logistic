@@ -1,0 +1,32 @@
+/* Shared refinements: preserve content and interactions across all candidates. */
+:root { --violet: #234f9a; --line: #dce2eb; --muted: #59667d; }
+.hero { background-image: none; }
+.eyebrow-light, .routes-demo-note { color: #c5d4ed; }
+.button-outline { color: var(--violet); border-color: #6d89b6; }
+.button-outline:hover, .freight-card:hover, .guide-card:hover { background: #f0f5fa; border-color: var(--violet); }
+.button-lime:hover { background: var(--lime); filter: brightness(.96); }
+.text-link:hover, .inline-link:hover { color: #13386d; }
+.services-intro { background: var(--navy); }
+.services-intro .eyebrow, .services-intro > p:not(.eyebrow) { color: #d0d9ed; }
+.freight-card, .review-card, .guide-card { border-color: var(--line); }
+.step-number { color: var(--violet); background: #edf3f9; border-color: #c6d5e6; }
+.step-line { background: #cad7e6; }
+.benefit-icon, .service-icon { background: #edf3f9; }
+.review-card > .icon { color: var(--violet); }
+.slider-button { border-color: #b8c8dd; }
+.partners-section { background: #f1f5f9; border-radius: 0; border-block: 1px solid var(--line); }
+.partners-section > p { color: var(--muted); }
+.bottom-quote { background: var(--navy); }
+.bottom-quote-intro .eyebrow, .bottom-quote-intro > p:last-child, .bottom-privacy { color: #c7d4eb; }
+.footer-contact .office-location .icon { color: var(--lime); }
+.review-slider { scrollbar-color: #b8c8dd #f1f5f9; }
+.hero, .routes-section, .bottom-quote, .about { border-radius: 14px; }
+.quote-card, .route-panel, .freight-card, .guide-card, .review-card, .services-intro { border-radius: 12px; }
+.services-intro h2, .expanded-heading { text-wrap: balance; }
+.brand:not(.footer-brand) img { filter: grayscale(1); }
+.service-item:hover .service-icon { background: #d9e6f3; }
+@media (min-width: 901px) {
+  .hero { width: 100%; max-width: 1456px; border-radius: 0; }
+  .hero-photo { border-radius: 12px; }
+  .company-statistics strong { color: var(--navy); }
+}

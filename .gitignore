@@ -6,3 +6,4 @@ dist/
 .DS_Store
 .vite/
 qa/screenshots/
+preview/full-page-variants/

@@ -56,3 +56,12 @@ The build embeds images, font, scripts, styles, favicon and third-party license 
 ## Remaining scope
 
 P3 polish could refine hero baseline/image-crop alignment further. This is a frontend prototype. Before public business use, replace all demo claims with confirmed facts and approve company name, actual services/contacts/legal text. Enquiry delivery and public hosting are not configured. No newly restored cloud task was tested.
+
+## Full-page comparison candidates
+
+Three additional full-page candidates now extend the selected original visual
+family without replacing the default site. See
+[the comparison review](design/full-page-variants/design-qa.md), which passed visual
+review and 48 browser checks per candidate (144 total). The comparison archive and
+six full desktop/mobile screenshots are linked from
+[the candidate overview](design/full-page-variants/README.md).

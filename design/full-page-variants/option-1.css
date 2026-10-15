@@ -1,0 +1,24 @@
+/* Same navy/lime family, restrained blue details and open editorial lists. */
+@media (min-width: 901px) {
+  .services-section { grid-template-columns: .85fr 1.15fr; gap: 60px; }
+  .services-intro { padding: 0; background: transparent; color: var(--navy); }
+  .services-intro .eyebrow { color: var(--violet); }
+  .services-intro h2 span { color: var(--violet); }
+  .services-intro > p:not(.eyebrow) { color: var(--muted); }
+  .services-intro .button { margin-top: 0; }
+  .services-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .freight-card { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 7px 22px; border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 25px 0; }
+  .freight-card > .icon { grid-row: 1 / span 3; margin: 0; }
+  .freight-card h3 { font-size: 25px; }
+  .freight-card p { margin: 0; }
+  .freight-card .card-link { grid-column: 2; margin-top: 7px; }
+  .benefits-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 38px; }
+  .benefit-item { display: block; }
+  .benefit-icon { margin-bottom: 19px; background: none; justify-content: flex-start; }
+  .review-card { border: 0; border-left: 2px solid var(--line); border-radius: 0; }
+  .guides-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .guide-card { display: grid; grid-template-columns: .65fr 1.3fr 1fr; gap: 15px 30px; padding: 29px 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; align-items: start; }
+  .guide-category { margin: 5px 0; }
+  .guide-card > p { margin: 0; }
+  .guide-card .card-link { grid-column: 2 / -1; margin-top: 7px; }
+}
