@@ -24,8 +24,10 @@ Preserve the upstream files when making website changes.
 - Keep the website in English and the office location Burgas, Bulgaria.
 - Preserve the full twelve-section homepage, partner strip and footer when changing
   its visual style, unless the user explicitly changes the scope.
-- The user wants a distinctive identity with less visual similarity to Cargov.
-  Three new concepts are in `design/redesign-directions/`; a selection is pending.
+- The user wants less visual similarity to Cargov while preserving the originally
+  selected style from `design/prototype-3.jpg`. They rejected radical style changes.
+  The latest three close hero variants are in `design/original-style-variants/`;
+  a selection is pending. The older `design/redesign-directions/` set is superseded.
 - Fictional figures, routes, partners and testimonials are authorized for this
   prototype and must remain clearly labelled as illustrative.
 - Preserve working interactions. Enquiry forms currently review and download data

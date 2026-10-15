@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-15",
+  "basis": "design/prototype-3.jpg",
+  "scope": "Three hero variants only; preserve all twelve homepage sections on implementation",
+  "display_order": [
+    {
+      "option": 1,
+      "concept": "Clear Route",
+      "generated_source": "exec-95c4882b-0f25-4ad5-9c50-c8bda89b95df.png",
+      "image": "option-1.jpg"
+    },
+    {
+      "option": 2,
+      "concept": "Port Window",
+      "generated_source": "exec-950f9a12-5c84-430b-a8b1-b657c29b0f0b.png",
+      "image": "option-2.jpg"
+    },
+    {
+      "option": 3,
+      "concept": "Route First",
+      "generated_source": "exec-0f295a8d-6865-4559-8213-2d7d05ada587.png",
+      "image": "option-3.jpg"
+    }
+  ]
+}
