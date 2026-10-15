@@ -1,4 +1,5 @@
 import './style.css';
+import './expanded.css';
 import portPhoto from './assets/port-sunset.webp';
 import panorama from './assets/burgas-panorama.webp';
 import routeBackground from './assets/route-background.webp';
@@ -14,8 +15,27 @@ import menu from '@phosphor-icons/core/assets/regular/list.svg?raw';
 import close from '@phosphor-icons/core/assets/regular/x.svg?raw';
 import download from '@phosphor-icons/core/assets/regular/download-simple.svg?raw';
 import check from '@phosphor-icons/core/assets/regular/check-circle.svg?raw';
+import arrowLeft from '@phosphor-icons/core/assets/regular/arrow-left.svg?raw';
+import packageIcon from '@phosphor-icons/core/assets/regular/package.svg?raw';
+import cube from '@phosphor-icons/core/assets/regular/cube.svg?raw';
+import stack from '@phosphor-icons/core/assets/regular/stack.svg?raw';
+import gear from '@phosphor-icons/core/assets/regular/gear-six.svg?raw';
+import storefront from '@phosphor-icons/core/assets/regular/storefront.svg?raw';
+import ruler from '@phosphor-icons/core/assets/regular/ruler.svg?raw';
+import arrows from '@phosphor-icons/core/assets/regular/arrows-left-right.svg?raw';
+import clipboard from '@phosphor-icons/core/assets/regular/clipboard-text.svg?raw';
+import globe from '@phosphor-icons/core/assets/regular/globe-hemisphere-east.svg?raw';
+import shield from '@phosphor-icons/core/assets/regular/shield-check.svg?raw';
+import chats from '@phosphor-icons/core/assets/regular/chats-circle.svg?raw';
+import path from '@phosphor-icons/core/assets/regular/path.svg?raw';
+import file from '@phosphor-icons/core/assets/regular/file-text.svg?raw';
+import clock from '@phosphor-icons/core/assets/regular/clock.svg?raw';
+import quotes from '@phosphor-icons/core/assets/regular/quotes.svg?raw';
+import plus from '@phosphor-icons/core/assets/regular/plus.svg?raw';
+import { routeGroups, guides } from './content.js';
+import { companySection, servicesSection, routesSection, routeRows, cargoSection, benefitsSection, partnersSection, testimonialsSection, guidesSection, faqSection, bottomQuoteSection } from './sections.js';
 
-const icons = { arrowRight, arrowUpRight, mapPin, caretDown, envelope, truck, boat, menu, close, download, check };
+const icons = { arrowRight, arrowLeft, arrowUpRight, mapPin, caretDown, envelope, truck, boat, menu, close, download, check, package: packageIcon, cube, stack, gear, storefront, ruler, arrows, clipboard, globe, shield, chats, path, file, clock, quotes, plus };
 const icon = (name, extraClass = '') => `<span class="icon ${extraClass}" aria-hidden="true">${icons[name].replace('<svg ', '<svg focusable="false" ')}</span>`;
 
 document.querySelector('#app').innerHTML = `
@@ -40,9 +60,11 @@ document.querySelector('#app').innerHTML = `
           <strong class="dropdown-title">Where do you need to go?</strong>
           <p>Share your collection and delivery locations. We’ll help you explore the options.</p>
           <a class="text-link" href="#quote" data-focus-quote>Plan your route ${icon('arrowRight')}</a>
+          <a class="dropdown-footer" href="#routes">Explore sample routes ${icon('arrowUpRight')}</a>
         </div>
       </div>
-      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#cargo-types">Cargo</a>
+      <a class="nav-link" href="#company">About</a>
       <button class="nav-link" type="button" data-dialog="contact">Contact</button>
     </nav>
     <div class="header-actions">
@@ -66,7 +88,7 @@ document.querySelector('#app').innerHTML = `
             <h2>Where is your cargo going?</h2>
             <p>Tell us a little about your shipment.</p>
           </div>
-          <form id="quote-form" novalidate>
+          <form id="quote-form" data-quote-form novalidate>
             <div class="field">
               <label for="collection">Collection location</label>
               <div class="input-wrap">${icon('mapPin')}<input id="collection" name="collection" type="text" placeholder="City, country" required maxlength="120" autocomplete="off" aria-describedby="collection-error" /></div>
@@ -103,6 +125,11 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
 
+    ${companySection(icon)}
+    ${servicesSection(icon)}
+    ${routesSection(icon)}
+    ${cargoSection(icon)}
+
     <section class="process content-container" id="process" aria-labelledby="process-heading">
       <p class="eyebrow"><span></span> Our process</p>
       <h2 class="section-heading" id="process-heading">From your first question<br /><span>to the final delivery.</span></h2>
@@ -113,6 +140,12 @@ document.querySelector('#app').innerHTML = `
       </ol>
     </section>
 
+    ${benefitsSection(icon)}
+    ${partnersSection()}
+    ${testimonialsSection(icon)}
+    ${guidesSection(icon)}
+    ${faqSection(icon)}
+
     <section class="about page-panel" id="about" aria-labelledby="about-heading" style="--panorama: url('${panorama}')">
       <div class="about-intro">
         <p class="eyebrow"><span></span> Your partner on the Black Sea</p>
@@ -120,19 +153,21 @@ document.querySelector('#app').innerHTML = `
         <p class="about-description">Road and sea freight, with a focus on clear communication and careful coordination from our office in Burgas.</p>
         <button class="text-link" type="button" data-dialog="about">Meet your logistics team ${icon('arrowRight')}</button>
       </div>
-      <div class="service-list" id="services" aria-label="Our services">
+      <div class="service-list" id="office-services" aria-label="Road and sea freight overview">
         <button class="service-item" type="button" data-dialog="road"><span class="service-icon">${icon('truck')}</span><span><strong>Road freight</strong><span class="service-description">Transport options tailored to your cargo and your route.</span></span></button>
         <button class="service-item" type="button" data-dialog="sea"><span class="service-icon">${icon('boat')}</span><span><strong>Sea freight</strong><span class="service-description">Sea freight planning with a local point of contact.</span></span></button>
       </div>
     </section>
+    ${bottomQuoteSection(icon)}
   </main>
 
   <footer class="site-footer page-panel">
     <div class="footer-top">
       <a class="brand footer-brand" href="#top" aria-label="Burgas Logistics home"><img src="${brandLogo}" alt="Burgas Logistics" width="200" height="49" /></a>
-      <nav class="footer-navigation" aria-label="Footer navigation"><a href="#services">Services</a><a href="#quote" data-focus-quote>Routes</a><a href="#about">About</a><button type="button" data-dialog="contact">Contact</button></nav>
+      <nav class="footer-navigation" aria-label="Footer navigation"><a href="#services">Services</a><a href="#routes">Routes</a><a href="#cargo-types">Cargo</a><a href="#company">About</a><button type="button" data-dialog="contact">Contact</button></nav>
       <div class="footer-contact"><span class="office-location">${icon('mapPin')} Burgas, Bulgaria</span><button type="button" data-dialog="contact">Contact our team</button></div>
     </div>
+    <p class="footer-demo-note">Website concept: company figures, routes, partner names and client stories are illustrative.</p>
     <div class="footer-bottom"><span>© 2026 Burgas Logistics. All rights reserved.</span><div><button type="button" data-dialog="privacy">Privacy Policy</button><button type="button" data-dialog="terms">Terms of Service</button></div></div>
   </footer>
 
@@ -149,11 +184,13 @@ const dialogContent = document.querySelector('#dialog-content');
 const nav = document.querySelector('#primary-navigation');
 const menuToggle = document.querySelector('.menu-toggle');
 let currentEnquiry = null;
-let submitted = false;
+const submittedForms = new WeakSet();
 
 const dialogs = {
   road: { eyebrow: 'Our services', title: 'A clear route by road.', text: 'Start with where your cargo is and where it needs to go. Share the cargo type, estimated weight and your preferred timing so our team can discuss suitable road freight options with you.', label: 'Plan a road shipment' },
   sea: { eyebrow: 'Our services', title: 'Your cargo, connected by sea.', text: 'From our base in Burgas, we help you explore sea freight options for your shipment. Tell us about your collection point, destination and cargo so we can plan the next steps together.', label: 'Plan a sea shipment' },
+  multimodal: { eyebrow: 'Our services', title: 'One journey. More than one way to move.', text: 'Some shipments need both an international sea leg and inland road transport. Share the full route so collection, ports and final delivery can be considered as one plan.', label: 'Plan a combined shipment' },
+  documents: { eyebrow: 'Our services', title: 'Start with the right information.', text: 'Bring your cargo description, packing information and commercial documents into the planning conversation. Exact customs and transport requirements depend on the shipment and should be confirmed with the relevant specialist.', label: 'Discuss the paperwork' },
   contact: { eyebrow: 'Let’s talk logistics', title: 'Your point of contact in Burgas.', text: 'Our office is based in Burgas, Bulgaria. Start with a few details about your route and cargo to prepare your enquiry.', label: 'Start your enquiry' },
   about: { eyebrow: 'Burgas, Bulgaria', title: 'A local team. A clear point of contact.', text: 'Good logistics starts with clear communication. Our Burgas office is your starting point for discussing your shipment, reviewing transport options and planning the next step.', label: 'Tell us about your shipment' },
 };
@@ -187,6 +224,9 @@ function openDialog(name) {
   if (dialogs[name]) {
     const item = dialogs[name];
     dialogContent.innerHTML = `<p class="eyebrow">${item.eyebrow}</p><h2 id="dialog-heading">${item.title}</h2><p class="dialog-description">${item.text}</p><div class="dialog-location">${icon('mapPin')} Burgas, Bulgaria</div><button class="button button-lime" type="button" data-start-enquiry>${item.label} ${icon('arrowRight')}</button>`;
+  } else if (guides.some(guide => guide.id === name)) {
+    const guide = guides.find(item => item.id === name);
+    dialogContent.innerHTML = `<p class="eyebrow">${guide.category}</p><h2 id="dialog-heading">${guide.title}</h2><div class="dialog-description">${guide.paragraphs.map(text => `<p>${text}</p>`).join('')}</div><button class="button button-lime" type="button" data-start-enquiry>Start your enquiry ${icon('arrowRight')}</button>`;
   } else if (name === 'privacy') {
     dialogContent.innerHTML = `<p class="eyebrow">Your information</p><h2 id="dialog-heading">Your privacy matters.</h2><div class="dialog-description"><p>This website preview does not send enquiries to a company inbox. The form values are held in this page only and are cleared when it is reloaded.</p><p>If you choose “Download enquiry”, a text file is created on your device. No form data is sent to a server. This website does not use analytics or advertising cookies.</p></div><button class="button button-navy" type="button" data-close-dialog>Got it ${icon('check')}</button>`;
   } else if (name === 'terms') {
@@ -226,7 +266,69 @@ document.addEventListener('click', event => {
   if (!event.target.closest('.nav-dropdown')) closeMenus();
   if (event.target.closest('.primary-navigation a')) closeMobileNavigation();
   if (event.target.closest('#download-enquiry')) downloadEnquiry();
+  const route = event.target.closest('[data-route-from]');
+  if (route) {
+    form.elements.collection.value = route.dataset.routeFrom;
+    form.elements.delivery.value = route.dataset.routeTo;
+    for (const field of [form.elements.collection, form.elements.delivery]) field.dispatchEvent(new Event('input', { bubbles: true }));
+    focusQuote();
+  }
+  const cargoChoice = event.target.closest('[data-cargo-type]');
+  if (cargoChoice) {
+    form.elements.cargo.value = cargoChoice.dataset.cargoType;
+    form.elements.cargo.dispatchEvent(new Event('change', { bubbles: true }));
+    focusQuote();
+  }
 });
+
+function selectRegion(key, moveFocus = false) {
+  const group = routeGroups[key];
+  if (!group) return;
+  document.querySelectorAll('[data-region]').forEach(tab => {
+    const selected = tab.dataset.region === key;
+    tab.setAttribute('aria-selected', String(selected));
+    tab.tabIndex = selected ? 0 : -1;
+    if (selected && moveFocus) tab.focus();
+  });
+  document.querySelector('#route-panel').setAttribute('aria-labelledby', `route-tab-${key}`);
+  document.querySelector('#route-mode').textContent = group.mode;
+  document.querySelector('#route-title').textContent = group.title;
+  document.querySelector('#route-description').textContent = group.description;
+  document.querySelector('#route-list').innerHTML = routeRows(group, icon);
+}
+
+const regionTabs = [...document.querySelectorAll('[data-region]')];
+regionTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => selectRegion(tab.dataset.region));
+  tab.addEventListener('keydown', event => {
+    let next = index;
+    if (event.key === 'ArrowRight') next = (index + 1) % regionTabs.length;
+    else if (event.key === 'ArrowLeft') next = (index + regionTabs.length - 1) % regionTabs.length;
+    else if (event.key === 'Home') next = 0;
+    else if (event.key === 'End') next = regionTabs.length - 1;
+    else return;
+    event.preventDefault();
+    selectRegion(regionTabs[next].dataset.region, true);
+  });
+});
+
+const reviewSlider = document.querySelector('#review-slider');
+const previousReview = document.querySelector('#review-previous');
+const nextReview = document.querySelector('#review-next');
+function updateReviewControls() {
+  previousReview.disabled = reviewSlider.scrollLeft <= 3;
+  nextReview.disabled = reviewSlider.scrollLeft + reviewSlider.clientWidth >= reviewSlider.scrollWidth - 3;
+}
+function moveReviews(direction) {
+  const first = reviewSlider.firstElementChild;
+  const distance = first.getBoundingClientRect().width + parseFloat(getComputedStyle(reviewSlider).gap);
+  reviewSlider.scrollBy({ left: direction * distance, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+}
+previousReview.addEventListener('click', () => moveReviews(-1));
+nextReview.addEventListener('click', () => moveReviews(1));
+reviewSlider.addEventListener('scroll', updateReviewControls, { passive: true });
+window.addEventListener('resize', updateReviewControls);
+updateReviewControls();
 
 document.addEventListener('keydown', event => {
   if (event.key !== 'Escape') return;
@@ -263,28 +365,28 @@ function validateField(field) {
   } else if (field.name === 'weight' && field.validity.badInput) {
     message = 'Enter a weight in kilograms.';
   }
-  const error = document.getElementById(`${field.name}-error`);
+  const error = document.getElementById(`${field.id}-error`);
   error.textContent = message || '';
   error.hidden = !message;
   field.setAttribute('aria-invalid', String(Boolean(message)));
   return !message;
 }
 
-const fields = [...form.querySelectorAll('input, select')];
-fields.forEach(field => {
-  field.addEventListener('input', () => { if (submitted || field.getAttribute('aria-invalid') === 'true') validateField(field); });
-  field.addEventListener('change', () => { if (submitted) validateField(field); });
-});
-
-form.addEventListener('submit', event => {
+document.querySelectorAll('[data-quote-form]').forEach(currentForm => {
+ const fields = [...currentForm.querySelectorAll('input, select')];
+ fields.forEach(field => {
+  field.addEventListener('input', () => { if (submittedForms.has(currentForm) || field.getAttribute('aria-invalid') === 'true') validateField(field); });
+  field.addEventListener('change', () => { if (submittedForms.has(currentForm)) validateField(field); });
+ });
+ currentForm.addEventListener('submit', event => {
   event.preventDefault();
-  submitted = true;
+  submittedForms.add(currentForm);
   const invalid = fields.filter(field => !validateField(field));
   if (invalid.length) {
     invalid[0].focus();
     return;
   }
-  currentEnquiry = Object.fromEntries(new FormData(form));
+  currentEnquiry = Object.fromEntries(new FormData(currentForm));
   for (const name of Object.keys(currentEnquiry)) currentEnquiry[name] = currentEnquiry[name].trim();
   dialogContent.innerHTML = `<p class="eyebrow">Your next step</p><h2 id="dialog-heading">Your enquiry, ready to review.</h2><p class="dialog-description">No message has been sent. Download your enquiry to keep a copy, or go back to edit the details.</p><dl class="enquiry-summary"><div><dt>Collection</dt><dd data-summary="collection"></dd></div><div><dt>Delivery</dt><dd data-summary="delivery"></dd></div><div><dt>Cargo</dt><dd data-summary="cargo"></dd></div><div><dt>Estimated weight</dt><dd data-summary="weight"></dd></div><div><dt>Work email</dt><dd data-summary="email"></dd></div></dl><div class="dialog-actions"><button class="button button-lime" type="button" id="download-enquiry">Download enquiry ${icon('download')}</button><button class="text-link" type="button" data-close-dialog>Edit details</button></div><p class="download-message" id="download-message" role="status"></p>`;
   for (const element of dialogContent.querySelectorAll('[data-summary]')) {
@@ -292,6 +394,7 @@ form.addEventListener('submit', event => {
     element.textContent = key === 'weight' ? (currentEnquiry[key] ? `${currentEnquiry[key]} kg` : 'Not specified') : currentEnquiry[key];
   }
   dialog.showModal();
+ });
 });
 
 function downloadEnquiry() {
