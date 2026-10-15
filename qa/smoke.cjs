@@ -68,7 +68,7 @@ const INPUT_HTML=path.resolve(ROOT,process.env.PREVIEW_HTML || 'dist/index.html'
  check('Benefits, client stories and guides are present',await page.locator('.benefit-item').count()===6&&await page.locator('.review-card').count()===4&&await page.locator('.guide-card').count()===3);
  check('Fictional company figures and reviews are labelled', (await page.locator('.company-statistics').innerText()).includes('Illustrative')&&(await page.locator('.testimonials-section > .demo-caption').innerText()).includes('not real customer reviews'));
  await page.getByRole('tab',{name:'Black Sea',exact:true}).click();
- check('Region tab changes route content',await page.locator('#route-title').innerText()==='A local base. A wider horizon.'&&await page.getByRole('tab',{name:'Black Sea',exact:true}).getAttribute('aria-selected')==='true');
+ check('Region tab changes route content',await page.locator('#route-title').innerText()==='Across the Black Sea.'&&await page.getByRole('tab',{name:'Black Sea',exact:true}).getAttribute('aria-selected')==='true');
  await page.getByRole('tab',{name:'Black Sea',exact:true}).press('End');
  check('Region tabs support keyboard navigation',await page.getByRole('tab',{name:'Asia',exact:true}).getAttribute('aria-selected')==='true');
  await page.locator('.route-row').first().click();

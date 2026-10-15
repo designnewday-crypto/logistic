@@ -1,67 +1,109 @@
-# Design QA — Burgas Logistics
+# Design QA — Burgas Logistics refinement
 
 final result: passed
 
-No actionable P0/P1/P2 findings remain in the reviewed prototype scope.
+Scope: full-page layout and typographic refinement inside the user's selected
+original navy/lime identity. This is not a pixel clone of Cargov or a new branding
+world. The twelve main sections, partner strip, English copy, Burgas office and
+working enquiry interactions remain.
 
-## Sources, state and evidence
+## Evidence and references
 
-The selected visual direction is design/prototype-3.jpg (946 × 1663). The user subsequently requested the fuller structure of https://cargov.ru/. The expanded homepage intentionally exceeds the original short mockup: twelve main sections, a partner strip and footer. Full-page height is not a fidelity target for this extension.
+- Original selected identity: design/prototype-3.jpg. Its navy/lime, bold Inter,
+  port photography and white enquiry form remain recognizable.
+- Previous implementation: Git commit dbb785a, design/implementation-desktop.jpg.
+- Current: design/implementation-desktop.jpg at1440 CSS px and
+  design/implementation-mobile.jpg at390 CSS px. Full page, top visible, blank
+  forms and closed menus/dialogs. Both include all twelve sections.
+- design/redesign-20261015/before-after.jpg compares the previous and current whole
+  pages together at identical horizontal scale. design/hero-form-comparison.jpg
+  compares the same1440×1000 first viewports; changes are intentional refinements.
+- Inspected full page, focused hero/services/routes/cargo/process regions, tablet
+  and mobile first viewports and independent review of full desktop/mobile captures.
+- Reference structure from Cargov remains a content starting point; its purple
+  panels, card grids, two-colored section headings and bright partner strip were
+  deliberately replaced.
 
-- design/hero-form-comparison.jpg and design/comparison-final.jpg show the selected source and implementation together, using the same x0–946/y0–760 region at the same scale. Empty form, closed menus/dialogs, no focus or hover.
-- Full structure reference: /workspace/reference-captures/cargov-desktop-full.png (1440 × 7579). Expanded implementation: qa/screenshots/desktop-1440-final.png (1440 × 8584). qa/screenshots/structure-comparison.jpg places both full captures together with identical scaling for section-order comparison; it is not a pixel-clone comparison.
-- design/implementation-desktop.jpg and design/implementation-mobile.jpg are the current full-page browser captures at 1440 and 390 CSS px respectively.
-- Focused inspection used actual capture crops qa/screenshots/inspect-desktop-*.jpg and inspect-mobile-*.jpg: services/routes, cargo/process, benefits/partners/reviews, guides/FAQ, office, bottom form and footer. These local QA files are ignored by Git.
-- Browser: installed Chromium through Playwright. Local HTTP development page renders at http://terminal.local:4173/ with local-only proxy bypass. The Sites preview CLI/cloud-browser connector is unavailable; verification used the cloud machine's actual Chromium.
-- qa/verification-results.json records 48 passed, 0 failed, no browser console/page errors, no form POSTs and no external-resource requests.
+## Skill application
 
-## Structure and intentional adaptations
+Taste Skill direction: borrowed-category, seed1239818412, palette/type retained.
+Idea: Burgas, the client's confirmed office city, becomes the departure point of a
+clear origin/destination interface and the content narrative. The useful live action
+is choosing a route or cargo category to prefill an enquiry. No fabricated live
+tracking, rates or availability were introduced.
 
-Hero → company/figures → four services → route regions/map → six cargo categories → process → six benefits → illustrative partners → testimonials → three logistics guides → six FAQ items → Burgas office → bottom enquiry → footer.
+The drawn consumer counter-object hero requires a physical product the company
+has not supplied; the user's pinned original photography/enquiry composition takes
+priority. Twelve sections remain despite the direction's generic shorter-page
+suggestion. Fictional business data remains explicitly labelled per user authority.
 
-The navy/lime hero and white quote card preserve option 3. Additional sections use its typography, spacing, violet, navy, lime and lavender palette. Guide articles fill the reference's news/editorial role without fabricating dated company events. Mobile stacks columns and services, keeps the map behind readable content, and uses a scrollable testimonial track. Added Cargo navigation intentionally replaces the compact header location label at intermediate widths; Burgas remains explicit in the hero and office section.
+Impeccable4.5.2: installed official project-local skill and launcher; context ran,
+PRODUCT.md captured the already agreed product facts. Layout/typeset and craft-floor
+instructions informed the redesign. The manual source detector ran once on the
+completed interface before the last route simplification; its only findings were
+two overused-font warnings for Inter. Inter is deliberately preserved from the
+selected style. Native automatic hooks were not enabled or claimed as active.
 
-## Findings and corrections
+An independent finish reviewer first returned fix for the nested route board.
+The fill was removed from its enclosing panel and rows, whitespace replaces
+separators, and a neutral scrim maintains legibility. The same desktop/mobile
+captures were refreshed; the reviewer scored that finding resolved with no observed
+fix-introduced regressions and disposition ship for the scored fix. This does not
+claim an external certification of the whole site. Documentation was separately
+extracted into token-bearing DESIGN.md and .impeccable/design.json.
 
-- [P2, resolved] Five footer links made the new single-column footer overflow at 320 px. Allowed wrapping and set the grid track to minmax(0,1fr). Final responsive checks pass at all seven widths.
-- [P2, resolved in initial implementation] Heading overflow, quote-card proportions, lightweight display type, panorama/text overlap and external favicon request were fixed before this extension and rechecked.
-- Viewport changes initially yielded stale media-query measurements in the test harness. The harness now waits for layout/render settlement before measuring each width; assertions were retained.
-- Focused visual inspection confirms clear text over both map and office panorama; service/cargo cards, review track, FAQ and both forms remain legible and aligned on desktop/mobile.
+## Mechanical checks and exceptions
 
-## Required fidelity surfaces
+- npm test:48 passed, zero failed. Includes independent forms/review/download,
+  dropdowns/dialogs, route-region keyboard controls, route/cargo prefilling, guides,
+  FAQ, review carousel, unique IDs, actual image/font rendering and widths
+  320/390/768/820/946/1024/1440. No page/console errors, external requests or formPOSTs.
+- Production HTML was rendered with Playwright in an offline context. The current
+  development HTTP page was separately opened in installed Chromium and its mobile
+  quote validation exercised. Direct file navigation is blocked by machine browser
+  policy, so direct file:// opening on this cloud machine is not claimed.
+- Taste static lint:0 FAIL,2 WARN, both pinned Inter. Three narrow inline comments
+  identify genuine visually-hidden accessibility sizing and floating-menu shadow
+  declarations, not decorative separators or resting shadows.
+- Raw Taste browser check:one icon-cards FAIL at390 px. Evidence maps it to four
+  tall native FAQ details elements with a standard Phosphor disclosure control,
+  not icon-topped marketing feature cards. The probe classifies any small SVG
+  anywhere inside equal-height boxed siblings as an icon-topped card. The raw
+  report is retained without alteration. A reviewed invocation allows that rule
+  for this verified native-control false positive; it is not added to persistent
+  skill defaults. The actual services and guide rows have visible text actions
+  and no small icon headers.
+- Remaining style warnings are explicit: service/guide list rows use a consistent
+  filled surface for clickable text (not multi-column feature-card grids); the
+  bounded single-quote carousel deliberately scrolls with named previous/next
+  controls; no documentary video was supplied, so an offline-friendly drifting
+  port photograph provides the moving-image treatment instead. Native browser
+  focus/hover states and reduced-motion behavior remain.
+- Main heading remains two lines at desktop/tablet/mobile. Body text is16 px;
+  metadata is at least13 px. Four different generated photographs ship; all seven
+  raster assets have prompt/origin metadata, verified by Impeccable's provenance scan.
 
-- Fonts/typography: bundled Inter variable, display weight 850, body/UI 400–650. The hero comparison retains headline hierarchy, wrapping and form density. Narrow headings reflow without clipping.
-- Spacing/layout: rounded navy hero, two-column form/photo composition and consistent control rhythm retained; new alternating white/navy/violet sections form the requested longer homepage. Mobile uses one-column content, vertical process and wrapping footer links.
-- Colors/tokens: navy #080c48, violet #5130ff, lime #e1ff67, lavender surfaces and muted text. Focus, selected tabs and invalid-field states are visible.
-- Image quality/assets: generated port photo, Burgas panorama, hero background, transparent brand logo, Europe map and fictional partner marks are local and embedded in the build. All were inspected. UI icon paths come from Phosphor; no handcrafted illustration substitutes or unresolved placeholder images.
-- Copy/content: English; confirmed office location Burgas, Bulgaria; provisional company name. The user explicitly requested fictional figures, routes, partners and testimonials. They are labelled illustrative on-page and maintained in src/content.js. Review/privacy copy correctly explains that enquiries remain local and no message is sent.
+Raw and reviewed checks are in design/redesign-20261015/. These report design
+heuristics rather than WCAG certification. No claim of a fully clean unconfigured
+Taste browser run is made.
 
-## Functional and environment checks
+## Required visual surfaces
 
-Frozen dependency installation previously passed; dependency declarations and lockfile are unchanged in this extension. npm test rebuilt the current page and passed all 48 checks: image/font rendering; menus and Escape/focus restoration; invalid/valid form fields; review and TXT download; independent bottom-form state; service/contact/privacy/terms dialogs; region tabs and keyboard navigation; route/cargo prefilling; articles; FAQ; carousel; unique IDs; widths 320/390/768/820/946/1024/1440; no console errors, outgoing form requests or external resources.
+Typography: selected bold Inter retained with a limited role scale, shorter section
+headings, one-color section titles and readable body copy. Spacing/layout: photo-and-
+list services, open route board, cargo photograph/catalogue, ordered process prose,
+open benefits, one large quotation, guide list, native FAQ, office panorama and lime
+close. Colors: deep/navy/white with lime for primary actions, selection and the
+pinned hero phrase; no violet UI. Imagery: original port/panorama plus generated
+truck and cargo; no placeholders. Copy: English, clear actions, explicit demo labels
+and honest local-only enquiry states.
 
-The production HTML was rendered with Playwright page.setContent in an offline browser context, including interactions and download. Direct file-scheme navigation is blocked by this machine's browser administrative policy, so direct file:// opening here is not claimed as verified. The development page was separately rendered over HTTP and its quote validation checked.
+## Packaging and remaining scope
 
-The build embeds images, font, scripts, styles, favicon and third-party license notices. preview/burgas-logistics.zip was refreshed; archive integrity passes and its index.html bytes exactly match the tested build.
+The build embeds all images, font, code, styles, favicon and license notices.
+The refreshed ZIP was integrity-checked; its index.html bytes match the tested
+production file. No public hosting or enquiry-delivery backend was configured.
 
-## Implementation checklist
-
-- [x] Inspect selected direction and full reference structure.
-- [x] Generate, inspect and place all visual assets.
-- [x] Extend responsive homepage and implement useful interactions.
-- [x] Inspect full and focused comparisons; fix actionable findings.
-- [x] Pass browser scenarios and standalone-build checks.
-- [x] Refresh screenshots, result record and self-contained download.
-
-## Remaining scope
-
-P3 polish could refine hero baseline/image-crop alignment further. This is a frontend prototype. Before public business use, replace all demo claims with confirmed facts and approve company name, actual services/contacts/legal text. Enquiry delivery and public hosting are not configured. No newly restored cloud task was tested.
-
-## Full-page comparison candidates
-
-Three additional full-page candidates now extend the selected original visual
-family without replacing the default site. See
-[the comparison review](design/full-page-variants/design-qa.md), which passed visual
-review and 48 browser checks per candidate (144 total). The comparison archive and
-six full desktop/mobile screenshots are linked from
-[the candidate overview](design/full-page-variants/README.md).
+OptionalP3: refine exact image crops and fine optical baselines. Before business
+launch replace demo facts, confirm the provisional name and real contacts/legal
+copy, and connect enquiry delivery. No freshly restored cloud task was tested.

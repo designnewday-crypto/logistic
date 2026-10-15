@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-15T11:30:14.451210+00:00",
+  "title": "Design System: Burgas Logistics",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Navy",
+        "canonical": "#0b1736",
+        "tonalRamp": [
+          "oklch(15% 0.055 265)",
+          "oklch(26% 0.055 265)",
+          "oklch(37% 0.055 265)",
+          "oklch(49% 0.055 265)",
+          "oklch(60% 0.055 265)",
+          "oklch(72% 0.055 265)",
+          "oklch(84% 0.055 265)",
+          "oklch(95% 0.055 265)"
+        ]
+      },
+      "deep": {
+        "role": "primary",
+        "displayName": "Deep",
+        "canonical": "#07112b",
+        "tonalRamp": [
+          "oklch(15% 0.05 265)",
+          "oklch(26% 0.05 265)",
+          "oklch(37% 0.05 265)",
+          "oklch(49% 0.05 265)",
+          "oklch(60% 0.05 265)",
+          "oklch(72% 0.05 265)",
+          "oklch(84% 0.05 265)",
+          "oklch(95% 0.05 265)"
+        ]
+      },
+      "lime": {
+        "role": "primary",
+        "displayName": "Lime",
+        "canonical": "#e1ff67",
+        "tonalRamp": [
+          "oklch(15% 0.16 115)",
+          "oklch(26% 0.16 115)",
+          "oklch(37% 0.16 115)",
+          "oklch(49% 0.16 115)",
+          "oklch(60% 0.16 115)",
+          "oklch(72% 0.16 115)",
+          "oklch(84% 0.16 115)",
+          "oklch(95% 0.16 115)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#40516b",
+        "tonalRamp": [
+          "oklch(15% 0.04 260)",
+          "oklch(26% 0.04 260)",
+          "oklch(37% 0.04 260)",
+          "oklch(49% 0.04 260)",
+          "oklch(60% 0.04 260)",
+          "oklch(72% 0.04 260)",
+          "oklch(84% 0.04 260)",
+          "oklch(95% 0.04 260)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#eef3f6",
+        "tonalRamp": [
+          "oklch(15% 0.01 240)",
+          "oklch(26% 0.01 240)",
+          "oklch(37% 0.01 240)",
+          "oklch(49% 0.01 240)",
+          "oklch(60% 0.01 240)",
+          "oklch(72% 0.01 240)",
+          "oklch(84% 0.01 240)",
+          "oklch(95% 0.01 240)"
+        ]
+      },
+      "surface-strong": {
+        "role": "neutral",
+        "displayName": "Surface Strong",
+        "canonical": "#e1eaf0",
+        "tonalRamp": [
+          "oklch(15% 0.015 240)",
+          "oklch(26% 0.015 240)",
+          "oklch(37% 0.015 240)",
+          "oklch(49% 0.015 240)",
+          "oklch(60% 0.015 240)",
+          "oklch(72% 0.015 240)",
+          "oklch(84% 0.015 240)",
+          "oklch(95% 0.015 240)"
+        ]
+      },
+      "on-dark": {
+        "role": "neutral",
+        "displayName": "On Dark",
+        "canonical": "#d7e1ee",
+        "tonalRamp": [
+          "oklch(15% 0.02 255)",
+          "oklch(26% 0.02 255)",
+          "oklch(37% 0.02 255)",
+          "oklch(49% 0.02 255)",
+          "oklch(60% 0.02 255)",
+          "oklch(72% 0.02 255)",
+          "oklch(84% 0.02 255)",
+          "oklch(95% 0.02 255)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#fff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(60% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "error": {
+        "role": "semantic",
+        "displayName": "Error",
+        "canonical": "#a01d31",
+        "tonalRamp": [
+          "oklch(15% 0.16 20)",
+          "oklch(26% 0.16 20)",
+          "oklch(37% 0.16 20)",
+          "oklch(49% 0.16 20)",
+          "oklch(60% 0.16 20)",
+          "oklch(72% 0.16 20)",
+          "oklch(84% 0.16 20)",
+          "oklch(95% 0.16 20)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Hero display",
+        "purpose": "Heavy selected-identity hero typography."
+      },
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Major homepage headings."
+      },
+      "title": {
+        "displayName": "Content title",
+        "purpose": "Service, cargo and guide titles; size reused by larger prose."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Readable descriptive content."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels and secondary-size text."
+      }
+    },
+    "shadows": [
+      {
+        "name": "floating-navigation",
+        "value": "0 18px 45px #07112b22",
+        "purpose": "Desktop dropdown only; removed for inline mobile navigation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Shared control and arrival easing."
+      },
+      {
+        "name": "control",
+        "value": "200ms",
+        "purpose": "Button, field-adjacent and panel feedback."
+      },
+      {
+        "name": "text-link",
+        "value": "220ms",
+        "purpose": "Text-link icon feedback."
+      },
+      {
+        "name": "arrival",
+        "value": "700ms",
+        "purpose": "Optional section arrival; suppressed with reduced motion."
+      },
+      {
+        "name": "port-drift",
+        "value": "20s ease-in-out infinite alternate",
+        "purpose": "Subtle port-photo motion; suppressed with reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrowest",
+        "value": "360px"
+      },
+      {
+        "name": "single-column-content",
+        "value": "600px"
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "900px"
+      },
+      {
+        "name": "compact-desktop-upper",
+        "value": "1190px"
+      },
+      {
+        "name": "wide-hero-lower",
+        "value": "1601px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Lime Button",
+      "kind": "button",
+      "refersTo": "button-lime",
+      "description": "Existing lime action treatment.",
+      "html": "<button class=\"ds-button-lime\">Request a quote</button>",
+      "css": ".ds-button-lime { display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:14px 24px; border:0; border-radius:var(--control-radius, 4px); background:var(--lime, #e1ff67); color:var(--navy, #0b1736); font:650 16px/1.4 \"Inter Variable\",sans-serif; cursor:pointer; transition:transform 200ms var(--ease, cubic-bezier(0.16,1,0.3,1)), background-color 200ms var(--ease, cubic-bezier(0.16,1,0.3,1)); } .ds-button-lime:hover { background:#d6f456; transform:translateY(-2px); } .ds-button-lime:active { transform:translateY(0) scale(.98); } .ds-button-lime:focus-visible { outline:3px solid #2e6f94; outline-offset:5px; }"
+    },
+    {
+      "name": "Navy Button",
+      "kind": "button",
+      "refersTo": "button-navy",
+      "description": "Existing navy action treatment.",
+      "html": "<button class=\"ds-button-navy\">Request a quote</button>",
+      "css": ".ds-button-navy { display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:14px 24px; border:0; border-radius:var(--control-radius, 4px); background:var(--navy, #0b1736); color:#fff; font:650 16px/1.4 \"Inter Variable\",sans-serif; cursor:pointer; transition:transform 200ms var(--ease, cubic-bezier(0.16,1,0.3,1)), background-color 200ms var(--ease, cubic-bezier(0.16,1,0.3,1)); } .ds-button-navy:hover { background:#1b3556; transform:translateY(-2px); } .ds-button-navy:active { transform:translateY(0) scale(.98); } .ds-button-navy:focus-visible { outline:3px solid #2e6f94; outline-offset:5px; }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Existing quiet action treatment.",
+      "html": "<button class=\"ds-button-quiet\">Request a quote</button>",
+      "css": ".ds-button-quiet { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:11px 18px; border:0; border-radius:var(--control-radius, 4px); background:var(--surface, #eef3f6); color:var(--navy, #0b1736); font:650 13px/1.4 \"Inter Variable\",sans-serif; cursor:pointer; transition:transform 200ms var(--ease, cubic-bezier(0.16,1,0.3,1)), background-color 200ms var(--ease, cubic-bezier(0.16,1,0.3,1)); } .ds-button-quiet:hover { background:var(--surface-strong, #e1eaf0); transform:translateY(-2px); } .ds-button-quiet:active { transform:translateY(0) scale(.98); } .ds-button-quiet:focus-visible { outline:3px solid #2e6f94; outline-offset:5px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Persistent label, bordered field and explicit focus.",
+      "html": "<label class=\"ds-label\" for=\"ds-collection\">Collection location</label><input class=\"ds-input\" id=\"ds-collection\" placeholder=\"City, country\" />",
+      "css": ".ds-label { display:block; margin-bottom:8px; color:var(--navy, #0b1736); font:650 13px/1.5 \"Inter Variable\",sans-serif; } .ds-input { width:100%; height:52px; padding:0 14px; color:var(--navy, #0b1736); background:#fff; border:1px solid #8191a6; border-radius:var(--control-radius, 4px); font:16px \"Inter Variable\",sans-serif; } .ds-input::placeholder { color:#526078; opacity:1; } .ds-input:hover { border-color:var(--navy, #0b1736); } .ds-input:focus { outline:3px solid #2e6f94; outline-offset:2px; } .ds-input[aria-invalid=\"true\"] { border:2px solid var(--error, #a01d31); }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "description": "Desktop navigation text with a touch-sized hit area.",
+      "html": "<nav><a class=\"ds-nav-link\" href=\"#services\">Services</a></nav>",
+      "css": ".ds-nav-link { display:inline-flex; align-items:center; min-height:44px; color:var(--navy, #0b1736); text-decoration:none; font:600 13px \"Inter Variable\",sans-serif; } .ds-nav-link:hover { color:#2b617c; } .ds-nav-link:focus-visible { outline:3px solid #2e6f94; outline-offset:5px; }"
+    },
+    {
+      "name": "Service Action",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "Flat, square service choice with a visible action label.",
+      "html": "<button class=\"ds-service\"><strong>Road freight</strong><p>Freight coordinated from Burgas.</p><span>Explore service</span></button>",
+      "css": ".ds-service { display:flex; flex-direction:column; align-items:flex-start; gap:10px; text-align:left; border:0; border-radius:0; padding:24px 28px; color:var(--navy, #0b1736); background:var(--surface, #eef3f6); font-family:\"Inter Variable\",sans-serif; cursor:pointer; transition:background-color 200ms var(--ease, cubic-bezier(0.16,1,0.3,1)); } .ds-service strong { font-size:24px; line-height:1.2; font-weight:750; letter-spacing:-.03em; } .ds-service p { font-size:16px; line-height:1.6; margin:0; max-width:45ch; } .ds-service span { font-size:13px; font-weight:650; line-height:1.5; margin-top:8px; } .ds-service:hover { background:var(--surface-strong, #e1eaf0); } .ds-service:focus-visible { outline:3px solid #2e6f94; outline-offset:5px; }"
+    },
+    {
+      "name": "Selected Region Tab",
+      "kind": "chip",
+      "refersTo": "region-tab-selected",
+      "description": "Selected region control inside the dark route board.",
+      "html": "<button class=\"ds-region\" role=\"tab\" aria-selected=\"true\">Europe</button>",
+      "css": ".ds-region { padding:12px 18px; min-height:48px; border:0; border-radius:var(--control-radius, 4px); color:var(--navy, #0b1736); background:var(--lime, #e1ff67); font:550 16px \"Inter Variable\",sans-serif; cursor:pointer; } .ds-region:hover { background:var(--lime, #e1ff67); } .ds-region:focus-visible { outline:3px solid var(--lime, #e1ff67); outline-offset:5px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Port departure board",
+    "overview": "This is a descriptive reading of the implemented interface, grounded in\n`src/style.css`, `src/sections.js` and `src/main.js`. It is not a new brand proposal.\nDark blue, lime, heavy Inter and port photography retain the user-selected identity.\nBroad type, clear origin/destination pairs and explicit action labels make shipment\ninformation easy to scan.\n\nThe page alternates open white content with dark route/review surfaces and a lime\nenquiry close. Photographs carry the logistics setting; typography and spacing\ncarry the hierarchy. `PRODUCT.md` records the durable constraints; homepage-specific\ncomposition belongs to `.impeccable/surfaces/home.md`.",
+    "keyCharacteristics": [
+      "Heavy, tightly spaced Inter headings.",
+      "Flat surfaces, square content panels and subtly rounded controls.",
+      "Port photography and an unboxed route board.",
+      "Clear English actions and visibly labelled demonstration content."
+    ],
+    "rules": [
+      {
+        "name": "The Surface Contrast Rule",
+        "body": "Use the light-surface and dark-surface text pairings already present; retain explicit field errors and keyboard focus indicators.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Preserve Inter's heavy display and restrained body hierarchy when extending this selected identity.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the selected dark-blue/lime identity and heavy Inter hierarchy.",
+      "**Do** keep action labels, keyboard focus and field labels visible.",
+      "**Do** reuse the existing flat surface and responsive spacing relationships.",
+      "**Do** retain demo labels and the local-only enquiry disclosure."
+    ],
+    "donts": [
+      "**Don't** replace the selected identity as a side effect of a detector warning.",
+      "**Don't** turn every list, route row and paragraph group into an elevated card.",
+      "**Don't** present generated imagery or fictional figures and reviews as verified proof."
+    ]
+  }
+}

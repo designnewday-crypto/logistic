@@ -8,7 +8,7 @@ export const companyStats = [
 
 export const routeGroups = {
   europe: {
-    label: 'Europe', title: 'Closer to your European markets.',
+    label: 'Europe', title: 'Europe by road.',
     description: 'Road freight corridors connecting our Burgas base with business destinations across Europe.',
     mode: 'Road freight',
     routes: [
@@ -19,7 +19,7 @@ export const routeGroups = {
     ],
   },
   blacksea: {
-    label: 'Black Sea', title: 'A local base. A wider horizon.',
+    label: 'Black Sea', title: 'Across the Black Sea.',
     description: 'Explore illustrative port and inland connections around the Black Sea, with Burgas as your starting point.',
     mode: 'Road & sea freight',
     routes: [
@@ -29,7 +29,7 @@ export const routeGroups = {
     ],
   },
   asia: {
-    label: 'Asia', title: 'Bring your supply chain together.',
+    label: 'Asia', title: 'Asia, connected.',
     description: 'Example import corridors combining international sea freight with onward transport and local coordination.',
     mode: 'Sea & multimodal freight',
     routes: [
@@ -59,24 +59,24 @@ export const benefits = [
 ];
 
 export const testimonials = [
-  { quote: 'We had one person to speak to from the first question to the final delivery. That clarity made planning our next shipment much easier.', name: 'Elena P.', role: 'Procurement manager', company: 'Illustrative retail client' },
-  { quote: 'The team explained the road and sea options in plain language. We could compare the approach and understand exactly what to prepare.', name: 'Martin K.', role: 'Operations director', company: 'Illustrative trading client' },
-  { quote: 'Our cargo needed a little extra planning. The questions about dimensions, loading and documents helped us get the details right early.', name: 'Sofia D.', role: 'Supply chain coordinator', company: 'Illustrative equipment client' },
-  { quote: 'Having a point of contact in Burgas helped bring the different parts of the journey together. The next steps were always easy to follow.', name: 'Alex R.', role: 'Import manager', company: 'Illustrative import client' },
+  { quote: 'One contact, from the first question to delivery. Planning our next shipment became much clearer.', name: 'Elena P.', role: 'Procurement manager', company: 'Illustrative retail client' },
+  { quote: 'Road and sea options, explained in plain language. We knew what to compare and what to prepare.', name: 'Martin K.', role: 'Operations director', company: 'Illustrative trading client' },
+  { quote: 'The questions about dimensions, loading and documents helped us plan our equipment shipment properly.', name: 'Sofia D.', role: 'Supply chain coordinator', company: 'Illustrative equipment client' },
+  { quote: 'A point of contact in Burgas brought the journey together. The next steps were always clear.', name: 'Alex R.', role: 'Import manager', company: 'Illustrative import client' },
 ];
 
 export const guides = [
-  { id: 'guide-quote', category: 'Shipment planning', icon: 'clipboard', title: 'What do we need to price your shipment?', summary: 'A useful enquiry starts with a few clear details. Here’s what to prepare.', paragraphs: [
+  { id: 'guide-quote', category: 'Shipment planning', icon: 'clipboard', title: 'Prepare your enquiry.', summary: 'A useful enquiry starts with a few clear details. Here’s what to prepare.', paragraphs: [
     'Start with the collection and delivery locations. Include the city, country and whether the shipment needs collection from or delivery to a port, warehouse or business address.',
     'Add a description of the goods, estimated weight, packaging and dimensions. Pallet or container details help make the enquiry more useful. Mention any handling restrictions or unusual requirements.',
     'Finally, share your preferred timing and contact details. A route and price can be reviewed once the shipment information and service availability are confirmed.',
   ] },
-  { id: 'guide-modes', category: 'Transport options', icon: 'arrows', title: 'Road or sea? Start with the right questions.', summary: 'Consider the cargo, the route and your priorities before choosing a transport mode.', paragraphs: [
+  { id: 'guide-modes', category: 'Transport options', icon: 'arrows', title: 'Road, sea or both?', summary: 'Consider the cargo, the route and your priorities before choosing a transport mode.', paragraphs: [
     'The right transport option depends on where the cargo starts, where it needs to go, its size and your preferred delivery timing.',
     'Road freight can connect collection and delivery addresses directly. Sea freight is often considered for international container movements. Some journeys combine both, with inland transport at either end.',
     'Rather than choosing a mode in isolation, share the full journey and the cargo requirements. That gives the planning conversation a clear starting point.',
   ] },
-  { id: 'guide-documents', category: 'Documents', icon: 'file', title: 'A clear document checklist saves questions later.', summary: 'Organise your cargo information before the shipment is ready to move.', paragraphs: [
+  { id: 'guide-documents', category: 'Documents', icon: 'file', title: 'Get the paperwork ready.', summary: 'Organise your cargo information before the shipment is ready to move.', paragraphs: [
     'A commercial invoice and packing information are common starting points for a freight enquiry. They help describe the goods, the parties involved and how the shipment is packaged.',
     'Transport and customs documents depend on the origin, destination, transport mode and the goods themselves. Requirements should be checked for the particular shipment.',
     'Tell the coordinator what you already have and what is still being prepared. Specific customs, regulatory or insurance requirements should be confirmed with the appropriate specialist before booking.',

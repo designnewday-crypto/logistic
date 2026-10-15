@@ -1,0 +1,38 @@
+TASTESKILL · INSPECT   dist/index.html
+
+MEASURED (first viewport listed)
+  hero headline   "Let’s get your cargo moving."  5 words · 2 line(s) · 92px (6.4vw) · Inter Variable 850 · tracking -0.04em · leading 1.03
+  @768px          2 line(s) · 66.8px
+  @390px          2 line(s) · 40px
+  typefaces       Inter Variable 100%
+  sizes in use    13 / 16 / 24 / 36 / 60 / 92 / 256 px   body 16px / 1.6
+  colour          page #ffffff · sections #07112b #0b1736 #eef3f6 #e1ff67 · button #e1ff67
+  page            10.2 screens · 895 words · 7 images · hero media 55% img
+  headings        16 · longest 2 line(s) · median 4 words
+
+FAIL — fix every one of these
+  [icon-cards] @390px  1 row(s) of identical cards each topped with a small icon (4 cards).
+      → Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item.
+
+WARN — fix, or be able to defend
+  [card-rows] @1440px  2 rows of identical boxed cards.
+      → Vary the composition; not every section is a card grid.
+  [no-footage] @1440px  No video anywhere on the page.
+      → Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject.
+  [side-scroll] @1440px (+768, 390)  1 row(s) scroll sideways with content past their edge.
+      → Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid.
+
+LOOK AT THE RENDER — open these with your image viewer / Read tool before saying anything about quality:
+  desktop 1440px  qa/screenshots/taste-final/desktop-fold.jpg
+                  qa/screenshots/taste-final/desktop-page-01.jpg
+                  qa/screenshots/taste-final/desktop-page-02.jpg
+                  qa/screenshots/taste-final/desktop-page-03.jpg
+  tablet 768px    qa/screenshots/taste-final/tablet-fold.jpg
+                  qa/screenshots/taste-final/tablet-page-01.jpg
+                  qa/screenshots/taste-final/tablet-page-02.jpg
+  mobile 390px    qa/screenshots/taste-final/mobile-fold.jpg
+                  qa/screenshots/taste-final/mobile-page-01.jpg
+                  qa/screenshots/taste-final/mobile-page-02.jpg
+
+report: qa/screenshots/taste-final/report.json
+RESULT: 1 FAIL, 3 WARN — not done.
